@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarHouse", "WarHouse\WarHouse.csproj", "{D976B87E-198A-44BD-89A8-1E8C0CBD7768}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WareHouse", "WarHouse\WareHouse.csproj", "{D976B87E-198A-44BD-89A8-1E8C0CBD7768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WareHouseLibrary", "WareHouseLibrary\WareHouseLibrary.csproj", "{676982DF-5D83-4DE1-8625-31884685016D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WareHouseLibrary", "WareHouseLibrary\WareHouseLibrary.csproj", "{676982DF-5D83-4DE1-8625-31884685016D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
