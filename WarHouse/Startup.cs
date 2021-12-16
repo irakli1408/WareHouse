@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WareHouse.Interfaces;
+using WareHouse.Services;
 using WareHouseLibrary.Mappings.Mappings;
 using WareHouseLibrary.WareHouseContext;
 using WarHouse.Interfaces;
@@ -32,11 +34,13 @@ namespace WarHouse
                 options.UseSqlServer(Configuration.GetConnectionString("WRHH"));
             });
 
-            services.AddHangfire(h => h.UseSqlServerStorage("server=DGA-086E1;database=WareHouseDataBase;Trusted_Connection=True;"));
+            //services.AddHangfire(h => h.UseSqlServerStorage("server=DGA-086E1;database=WareHouseDataBase;Trusted_Connection=True;"));
 
-            services.AddHangfireServer();
+           // services.AddHangfireServer();
 
             services.AddScoped<IMport, ImportToExcelService>();
+
+          //  services.AddScoped<IJobLogic, JobLogicService>();
 
             services.AddScoped<IFilter, FilterMethod>();
 
@@ -62,18 +66,20 @@ namespace WarHouse
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
-            app.UseHangfireDashboard("/dashboard");
+           // app.UseHangfireDashboard("/dashboard");
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
         }
+
     }
 }

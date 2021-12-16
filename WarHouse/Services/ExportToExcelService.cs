@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using WareHouseLibrary.Entities;
 using WareHouseLibrary.WareHouseContext;
 using WarHouse.Interfaces;
+using WareHouse.Services;
 
 namespace WarHouse.Services
 {
@@ -16,13 +17,15 @@ namespace WarHouse.Services
 
         private readonly WHDBContext context;
         private readonly IFilter filt;
+       
         public ExportToExcelService(WHDBContext context, IFilter filt)
         {
             this.filt = filt;
             this.context = context;
         }
+     
         public FileResult ExportToExcelMethod(FilterModel model)
-        {
+        {         
             var result = filt.exportModel(model);
            
                 using (var workbook = new XLWorkbook())

@@ -12,6 +12,7 @@ namespace WareHouseLibrary.WareHouseContext
         public DbSet<Product> Products { get; set; }
         public DbSet<Requisite> Requisites { get; set; }
         public DbSet<Status> Statuses { get; set; }
+        public DbSet<DateTimeForJobsAmountCounter> AmountCount { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

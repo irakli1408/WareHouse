@@ -17,6 +17,7 @@ namespace WareHouseLibrary.Entities
         public string Description { get; set; }
         public Product Product { get; set; }
         public int StatusId { get; set; }
+        public int Count { get; set; }
         public Status Status { get; set; }
         [Required]
         public DateTime DateCreated { get; set; }

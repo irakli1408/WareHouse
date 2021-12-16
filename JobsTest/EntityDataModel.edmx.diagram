@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="31eefae55a924049b336c64adb32864f" Name="Diagram1">
+        <EntityTypeShape EntityType="WareHouseDataBaseModel.Product" Width="1.5" PointX="0.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WareHouseDataBaseModel.Requisite" Width="1.5" PointX="6.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WareHouseDataBaseModel.Status" Width="1.5" PointX="1.25" PointY="4.125" IsExpanded="true" />
+        <AssociationConnector Association="WareHouseDataBaseModel.FK_Requisites_Products_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="WareHouseDataBaseModel.FK_Requisites_Statuses_StatusId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
